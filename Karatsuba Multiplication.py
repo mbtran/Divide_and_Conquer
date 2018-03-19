@@ -7,6 +7,7 @@ def splitnumber(number, n):
     n2 = number % (10 ** (n // 2))
     return n1, n2
 
+
 def multiply(x, y):
     '''Karatsuba multiplication by recursion'''
 
