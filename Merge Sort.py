@@ -6,6 +6,7 @@ shortList = [3, 12, 32, 45, 23, 12, 63, 33]
 
 unsorted1 = [60, 20, 32, 45, 23, 13, 63, 33, 40, 99, 2, 25, 109, 44, 200, 1, 65]
 
+
 def MergeSort(unsortedlist):
     '''Recursive function to sort list.'''
     if int(len(unsortedlist)) < 2:
@@ -16,6 +17,7 @@ def MergeSort(unsortedlist):
         left = MergeSort(unsortedlist[:middle])
         right = MergeSort(unsortedlist[middle:])
     return Merge(left, right)
+
 
 def Merge(left, right):
     print(left)
@@ -49,5 +51,6 @@ def Merge(left, right):
         j += 1
 
     return sorted
+
 
 print(MergeSort(unsorted))
