@@ -12,12 +12,12 @@ def splitnumber(number, n):
 def multiply(x, y):
     '''Karatsuba multiplication by recursion'''
 
-    # base case
+    # Base case
     if x < 10 or y < 10:
         return x * y
 
-    n = int(len(str(x)))
     # Removes a 'digit' if digits are odd prior to taking half.
+    n = int(len(str(x)))
     n -= n % 2
     halfn = int(n // 2)
 
