@@ -3,14 +3,14 @@ y = 2718281828459045235360287471352662497757247093699959574966967627
 
 
 def splitnumber(number, n):
-    '''Takes a number and splits it in half by digits'''
+    """Takes a number and splits it in half by digits"""
     n1 = number // (10 ** (n // 2))
     n2 = number % (10 ** (n // 2))
     return n1, n2
 
 
 def multiply(x, y):
-    '''Karatsuba multiplication by recursion'''
+    """Karatsuba multiplication by recursion"""
 
     # Base case
     if x < 10 or y < 10:
