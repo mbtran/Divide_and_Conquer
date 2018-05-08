@@ -18,20 +18,20 @@ def multiply(x, y):
 
     n = int(len(str(x)))
     # Removes a 'digit' if digits are odd prior to taking half.
-    # Why does this make it work?! Shouldn't using // effectively do the same thing?
-    # It looks like a, b, c, d are the same values with and without this line of code
-    # But with n -= n % 2 the answers come out correct?!
     n -= n % 2
     halfn = int(n // 2)
 
+    # Assigns variables to the first half or second half of the original number
     a, b = splitnumber(x, n)
     c, d = splitnumber(y, n)
 
+    # Recursively multiplies
     ac = multiply(a, c)
     bd = multiply(b, d)
     aplusbcplusd = multiply((a + b), (c + d))
     adbc = aplusbcplusd - ac - bd
 
+    # Karatsuba formula to multiply
     answer = (ac * (10 ** n)) + (adbc * (10 ** (halfn))) + bd
     return answer
 
